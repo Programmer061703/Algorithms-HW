@@ -8,7 +8,7 @@ LDFLAGS=
 # Using OpenCV for Visualization
 # 0 for off 1 for on 
 OPENCV=1
-ifeq ($(OPENCV), 1)
+ifeq ($(OPENCV), 0)
 	LDFLAGS+=  `pkg-config --libs opencv4`
 	CFLAGS+= -DOPENCV=1 `pkg-config --cflags opencv4`
 endif
