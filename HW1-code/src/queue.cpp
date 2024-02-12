@@ -1,4 +1,5 @@
 #include <queue.hpp>
+ 
 
 template<class T>
 QueueNode<T>::QueueNode(T value, QueueNode<T>* next, QueueNode<T>* prev) {
