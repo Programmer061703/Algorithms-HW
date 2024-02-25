@@ -2,16 +2,26 @@
 
 void bfs(Graph &G, int start, int destination) {
     Queue<int> queue;
-    G.reset();
-    // YOUR CODE HERE
+    G.reset(); 
+    queue.push(start);
+    G.visited[start] = true; 
+    G.setTrace(start, -1); 
+
     while (!queue.empty()) {
         int u = queue.pop();
-        // YOUR CODE HERE
+        
+        // Optional: Check if u is the destination; if so, you may want to break or do something specific
+        
         int numberOfAdjacencyNodes = G.e[u].size();
         LinkedListNode<int> *p = G.e[u].getRoot();
-        for (int i = 0; i < numberOfAdjacencyNodes; i += 1, p = p->next) {
+        for (int i = 0; i < numberOfAdjacencyNodes; i++, p = p->next) {
             int v = p->value;
-            // YOUR CODE HERE
+            if (!G.visited[v]) {
+                G.visited[v] = true; 
+                G.setTrace(v, u); 
+                queue.push(v); 
+            }
         }
     }
 }
+

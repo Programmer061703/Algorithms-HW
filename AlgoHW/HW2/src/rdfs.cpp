@@ -1,11 +1,19 @@
 #include <search.hpp>
 
 void rdfs(Graph &G, int start, int destination) {
-    // YOUR CODE HERE
+    // Mark the current node as visited
+    G.visited[start] = true;
+    if (start == destination) {
+        return;
+    }
     int numberOfAdjacencyNodes = G.e[start].size();
     LinkedListNode<int> *p = G.e[start].getRoot();
     for (int i = 0; i < numberOfAdjacencyNodes; i += 1, p = p->next) {
         int v = p->value;
-        // YOUR CODE HERE
+        if (!G.visited[v]) {
+            G.setTrace(v, start); // Set the previous vertex of v as start before diving deeper
+            rdfs(G, v, destination);
+        }
     }
 }
+
