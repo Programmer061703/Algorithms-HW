@@ -5,7 +5,7 @@ CC=gcc
 CXX=g++ -std=c++11
 
 # Using OpenCV for Visualization
-OPENCV=1
+OPENCV=0
 ifeq ($(OPENCV), 1)
 	LDFLAGS+=  `pkg-config --libs opencv4`
 	CFLAGS+= -DOPENCV=1 `pkg-config --cflags opencv4`

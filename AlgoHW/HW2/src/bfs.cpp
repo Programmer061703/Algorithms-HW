@@ -10,8 +10,9 @@ void bfs(Graph &G, int start, int destination) {
     while (!queue.empty()) {
         int u = queue.pop();
         
-        // Optional: Check if u is the destination; if so, you may want to break or do something specific
-        
+        if (u == destination) {
+            return;
+        }
         int numberOfAdjacencyNodes = G.e[u].size();
         LinkedListNode<int> *p = G.e[u].getRoot();
         for (int i = 0; i < numberOfAdjacencyNodes; i++, p = p->next) {

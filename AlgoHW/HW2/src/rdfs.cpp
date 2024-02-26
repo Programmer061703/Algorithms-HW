@@ -11,7 +11,7 @@ void rdfs(Graph &G, int start, int destination) {
     for (int i = 0; i < numberOfAdjacencyNodes; i += 1, p = p->next) {
         int v = p->value;
         if (!G.visited[v]) {
-            G.setTrace(v, start); // Set the previous vertex of v as start before diving deeper
+            G.setTrace(v, start); 
             rdfs(G, v, destination);
         }
     }
