@@ -7,7 +7,7 @@ CXX=g++
 FILES=algorithms/mst.cpp graph.cpp main.cpp
 
 # Using OpenCV for Visualization
-OPENCV=0
+OPENCV=1
 ifeq ($(OPENCV), 1)
 	LDFLAGS+=  `pkg-config --libs opencv4`
 	CFLAGS+= -DOPENCV=1 `pkg-config --cflags opencv4`
