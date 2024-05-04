@@ -11,11 +11,11 @@ std::vector<int> searchShortestPath(Graph &G, int start, int destination) {
     std::vector<int> path;
 
     std::priority_queue<Edge, std::vector<Edge>, EdgeKeyComparison> pq;
-    std::vector<int> dist(G.n, INT_MAX); // distances from start vertex
-    std::vector<int> parent(G.n, -1);    // parent vertex for each vertex in shortest path
+    std::vector<int> dist(G.n, INT_MAX); 
+    std::vector<int> parent(G.n, -1);    
 
     dist[start] = 0;
-    pq.push(Edge(start, start, 0)); // start vertex with distance 0
+    pq.push(Edge(start, start, 0)); 
 
     while (!pq.empty()) {
         Edge curr = pq.top();
@@ -24,11 +24,10 @@ std::vector<int> searchShortestPath(Graph &G, int start, int destination) {
         int u = curr.v;
         int w = curr.w;
 
-        // Ignore outdated (longer) distances
+ 
         if (w > dist[u])
             continue;
 
-        // Relaxation step
         for (const Edge &e : G.e[u]) {
             int v = e.v;
             int weight = e.w;

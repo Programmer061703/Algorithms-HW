@@ -20,9 +20,7 @@ std::vector<Edge> constructMSTKruskal(Graph G) {
 
         // Check if adding the edge creates a cycle
         if (djs.isOnSameSet(u, v) == 0) {
-            // Add the edge to the MST
             mst.push_back(edge);
-            // Merge the sets of its endpoints
             djs.join(u, v);
         }
     }

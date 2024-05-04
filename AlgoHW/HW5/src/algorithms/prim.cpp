@@ -12,7 +12,6 @@ struct EdgeKeyComparison {
 
 
 std::vector<Edge> constructMSTPrim(Graph G) {
-    std::vector<Edge> edges = G.exportEdges();
     std::vector<Edge> mst;
 
     std::priority_queue<Edge, std::vector<Edge>, EdgeKeyComparison> pq;
@@ -20,12 +19,12 @@ std::vector<Edge> constructMSTPrim(Graph G) {
     std::vector<int> parent(G.n, -1); // parent vertex for each vertex in MST
 
     // Choose starting vertex
-    int start = 0; // You can choose any starting vertex
+    int start = 0; 
 
     // Mark starting vertex as visited
     visited[start] = true;
 
-    // Enqueue all edges incident to the starting vertex
+    
     for (const Edge& e : G.e[start]) {
         pq.push(e);
     }
@@ -48,7 +47,7 @@ std::vector<Edge> constructMSTPrim(Graph G) {
         mst.push_back(curr);
         parent[v] = u;
 
-        // Enqueue all edges incident to the destination vertex that connect to unvisited vertices
+        
         for (const Edge& e : G.e[v]) {
             if (!visited[e.v]) {
                 pq.push(e);
