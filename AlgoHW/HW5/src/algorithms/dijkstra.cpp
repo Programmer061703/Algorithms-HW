@@ -1,4 +1,5 @@
 #include <graph.hpp>
+#include <climits>
 #include <queue>
 
 struct EdgeKeyComparison {

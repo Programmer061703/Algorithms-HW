@@ -1,0 +1,32 @@
+Script started on 2024-05-04 11:21:18-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="189" LINES="21"]
+[?2004h]0;gigga@gigga-Latitude-7390: ~/junior_second_semester/Algorithms/AlgoHW/HW5[01;32mgigga@gigga-Latitude-7390[00m:[01;34m~/junior_second_semester/Algorithms/AlgoHW/HW5[00m$ make dijkstra
+[?2004lg++ -I./include/ -std=c++14  -DDIJKSTRA src/data_structures/disjoint_set.cpp src/graph.cpp src/main.cpp src/sort/msort.cpp src/algorithms/dijkstra.cpp  -o bin/dijkstra 
+./bin/dijkstra 
+
+Perform unit test of the Dijkstra algorithm
+Path from 0 to 5: 0 1 2 4 5 
+
+Path from SAEF to  detination: SAEF -> BUCH -> LCAF -> GLAD2 -> PDTF -> SINF -> LMK111 -> WAHR -> SDPG2 -> ARKU2 -> POST -> FPAC -> WATR -> ARSAGAS -> CORD1 -> PTSC -> MEMH2 -> ARMY -> GRAD
+You have to use OpenCV to visualize your map road
+[?2004h]0;gigga@gigga-Latitude-7390: ~/junior_second_semester/Algorithms/AlgoHW/HW5[01;32mgigga@gigga-Latitude-7390[00m:[01;34m~/junior_second_semester/Algorithms/AlgoHW/HW5[00m$ make kru[K[Kruskal
+[?2004lg++ -I./include/ -std=c++14  -DKRUSKAL src/data_structures/disjoint_set.cpp src/graph.cpp src/main.cpp src/sort/msort.cpp src/algorithms/kruskal.cpp  -o bin/kruskal 
+./bin/kruskal 
+
+Perform unit test of the Kruskal's algorithm
+Total Cost of Minimum Spanning Tree: 16
+
+Total Cost of Minimum Spanning Tree: 9315
+You have to use OpenCV to visualize your map
+[?2004h]0;gigga@gigga-Latitude-7390: ~/junior_second_semester/Algorithms/AlgoHW/HW5[01;32mgigga@gigga-Latitude-7390[00m:[01;34m~/junior_second_semester/Algorithms/AlgoHW/HW5[00m$ make prim
+[?2004lg++ -I./include/ -std=c++14  -DPRIM src/data_structures/disjoint_set.cpp src/graph.cpp src/main.cpp src/sort/msort.cpp src/algorithms/prim.cpp  -o bin/prim 
+./bin/prim 
+
+Perform unit test of the Prim's algorithm
+Total Cost of Minimum Spanning Tree: 16
+
+Total Cost of Minimum Spanning Tree: 9315
+You have to use OpenCV to visualize your map
+[?2004h]0;gigga@gigga-Latitude-7390: ~/junior_second_semester/Algorithms/AlgoHW/HW5[01;32mgigga@gigga-Latitude-7390[00m:[01;34m~/junior_second_semester/Algorithms/AlgoHW/HW5[00m$ exit
+[?2004lexit
+
+Script done on 2024-05-04 11:21:46-05:00 [COMMAND_EXIT_CODE="0"]
